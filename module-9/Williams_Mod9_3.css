@@ -1,0 +1,58 @@
+body {
+    font-size: 16px;
+}
+
+p {
+    font-weight: 400;
+    font-family: Times New Roman;
+    line-height: 1.4em;
+}
+
+h1 {
+    font-weight: 700;
+    font-family:Courier New;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: bold;
+    font-family:Courier New;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#buttons {
+    text-align: center;
+    margin-top: 40px;
+    word-spacing: 10px;
+}
+
+address {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.intro {
+    text-indent: 2em;
+}
+
+.sentence {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    background-color: #D6A800;
+    text-decoration: underline;
+}
