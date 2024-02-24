@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> CSD 340 Development with HTML and CSS </title>
+    </head>
+    <body>
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+        <h2>Color Combinations</h2>
+        <div id="container">
+            <h4>How Do You Make Purple?</h4>
+            <div class="colorCombo">
+                <div class="colorDisplay">
+                    <img src="purple.png" alt="purple">
+                    <!-- Button container to center buttons under the image -->
+                    <div class="button">
+                        <button onclick="showPurple()">Reveal</button>
+                        <button onclick="hidePurple()">Hide</button>
+                    </div>
+                </div>
+                <div id="purpleColors" class="comboPlaceholder"></div>
+            </div>
+            <h4>How Do You Make Yellow?</h4>
+            <div class="colorCombo">
+                <div class="colorDisplay">
+                    <img src="yellow.png" alt="yellow">
+                    <div class="button">
+                        <button onclick="showYellow()">Reveal</button>
+                        <button onclick="hideYellow()">Hide</button>
+                    </div>
+                </div>
+                <div id="yellowColors" class="comboPlaceholder"></div>
+            </div>
+        </div>
+        <script>
+            function showPurple() {
+                let purpleColors = document.getElementById("purpleColors");
+                if (!purpleColors.hasChildNodes()) { // Verify the combo images weren't already added
+                    displayPurple();
+                }
+                purpleColors.style.display = 'flex'; // Makes sure the combo colors are visible
+            }
+
+            function hidePurple() {
+                let purpleColors = document.getElementById("purpleColors");
+                purpleColors.style.display = 'none'; // Hide the combo colors
+            }
+
+            function displayPurple() {
+                let purpleCombo = document.getElementById("purpleColors");
+                let red = document.createElement("img");
+                let blue = document.createElement("img");
+                red.src = "red.png";
+                blue.src = "blue.png";
+                red.style.width = "150px";
+                blue.style.width = "150px";
+                purpleCombo.append(red, blue);
+            }
+
+            function showYellow() {
+                let yellowColors = document.getElementById("yellowColors");
+                if (!yellowColors.hasChildNodes()) { // Verify the combo images weren't already added
+                    displayYellow();
+                }
+                yellowColors.style.display = 'flex'; // Makes sure the combo colors are visible
+            }
+
+            function hideYellow() {
+                let yellowColors = document.getElementById("yellowColors");
+                yellowColors.style.display = 'none'; // Hide the combo colors
+            }
+
+            function displayYellow() {
+                let yellowCombo = document.getElementById("yellowColors");
+                let red = document.createElement("img");
+                let green = document.createElement("img");
+                red.src = "red.png";
+                green.src = "green.png";
+                red.style.width = "150px";
+                green.style.width = "150px";
+                yellowCombo.append(red, green);
+            }
+        </script>
+    </body>
+</html>

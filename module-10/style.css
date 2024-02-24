@@ -1,0 +1,42 @@
+h1, h2 {
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 2px;
+}
+
+.colorCombo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.colorDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: flex;
+    justify-content:space-between;
+    width: 80%;
+}
+
+.comboPlaceholder {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+#purpleColors, #yellowColors {
+    margin-bottom: 22px;
+}
+
