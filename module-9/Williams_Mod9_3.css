@@ -1,5 +1,6 @@
 body {
     font-size: 16px;
+    margin-bottom: 10%;
 }
 
 p {
@@ -54,5 +55,31 @@ a:visited {
 
 a:hover {
     background-color: #D6A800;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgb(3, 3, 82);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer p{
+    text-align: left;
+    color: white; 
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+footer a:hover {
     text-decoration: underline;
 }
