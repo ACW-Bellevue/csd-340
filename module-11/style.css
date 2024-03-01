@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color: rgb(32, 32, 129);
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(3, 3, 82);
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer p{
+    text-align: left;
+    color: white; 
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

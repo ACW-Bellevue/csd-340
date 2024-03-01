@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <h2>To Do List</h2>
+    <input type="text" id="itemText" placeholder="Enter a to-do item">
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteItem()">Delete Entry</button>
+    <button onclick="displayItems()">Display</button>
+    <div id="displayArea"></div>
+    <p>Enter a task in the text box and select "Display" to refresh your list.</p>
+
+    <footer>
+        <p>&copy; 2024 - Williams</p>
+        <p><a href="../index.html">Back to Landing Page</a></p>
+    </footer>
+
+    <script>
+        // Array to store list items
+        let todoItems = [];
+
+        // Add items to the array
+        function addItem() {
+            const itemText = document.getElementById('itemText').value;
+            if (itemText !== '') {
+                todoItems.push(itemText);
+                alert('Added "' + itemText + '" to the list.');
+                document.getElementById('itemText').value = ''; // Clear the input box after adding
+            } else {
+                alert('Please enter a to-do item.');
+            }
+        }
+
+        // Delete item from the array
+        function deleteItem() {
+            const itemNumber = prompt('Enter the number of the item you wish to delete:');
+            const index = parseInt(itemNumber, 10) - 1; // Convert user input string to int
+
+            if (!isNaN(index) && index >= 0 && index < todoItems.length) {
+                const deletedItem = todoItems.splice(index, 1);
+                alert('Deleted: "' + deletedItem + '".');
+            } else {
+                alert('Invalid item number.');
+            }
+        }
+
+        // Display list items on the page
+        function displayItems() {
+            const displayArea = document.getElementById('displayArea');
+            if (todoItems.length > 0) {
+                let content = '<ul>';
+                todoItems.forEach((item, index) => {
+                    content += '<li>' + (index + 1) + '. ' + item + '</li>';
+                });
+                content += '</ul>';
+                displayArea.innerHTML = content;
+            } else {
+                displayArea.innerHTML = 'The list is empty.';
+            }
+        }
+    </script>
+</body>
+</html>
