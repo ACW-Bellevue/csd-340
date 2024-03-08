@@ -1,0 +1,74 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+button {
+    background-color: rgb(32, 32, 129);
+    color: white;
+}
+
+ul {
+    list-style: upper-roman;
+}
+
+ol, ul {
+    font-weight: 300;
+    list-style-position: inside;
+}
+
+/*I assumed we were supposed to pad the list AND the title. Not padding the title
+would have required adding "padding-left" to "h3" to prevent the title from touching the border.
+*/
+.list_1_div, .list_2_div {
+    float: left;
+    padding: 10px;
+    width: 45%;
+    border-radius: 15px;
+}
+
+.list_1_div {
+    border: 1px solid red;
+}
+
+/* I added a margin to the unordered list to mirror the "browser output example" that was 
+provided. Otherwise there wouldn't have been any space between the list borders.
+*/
+.list_2_div {
+    border: 1px dashed red;
+    margin-left: 5%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(3, 3, 82);
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer p{
+    text-align: left;
+    color: white; 
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+

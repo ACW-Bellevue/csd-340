@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Williams_Mod12_2.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div class="list_1_div">
+            <h3>Top 10 Favorite Books</h3>
+            <button id="topToBottom">Top to Bottom</button>
+            <button id="bottomToTop">Bottom to Top</button>
+            <ol id="bookList">
+            </ol>
+        </div>
+        <div class="list_2_div">
+            <h3>5 Things I've Learned Since the Course Started</h3>
+            <ul>
+                <li>How to create static web pages using HTML and CSS</li>
+                <li>How to perform version control on VS Code</li>
+                <li>How to create GitHub pages</li>
+                <li>The various ways HTML and CSS connect and interact</li>
+                <li>A little about HTTP and the way information travels online</li>
+            </ul>
+        </div>
+        <footer>
+            <p>&copy; 2024 - Williams</p>
+            <p><a href="../index.html">Back to Landing Page</a></p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let books = [
+                "The War of Art",
+                "The Beginning of Infinity",
+                "The Fabric of Reality",
+                "The Writing Life",
+                "The Pentagon's Brain",
+                "The Price of Tomorrow",
+                "Outlive",
+                "The Foundation Series",
+                "Meditations",
+                "The Lord of the Rings Trilogy"
+            ];
+
+            function displayBooksAsc() {
+                let listHtml = books.map(book => `<li>${book}</li>`).join('');
+                document.getElementById('bookList').innerHTML = listHtml;
+                document.getElementById('bookList').removeAttribute('reversed');
+                document.getElementById('bookList').setAttribute('start', '1');
+            }
+
+            function displayBooksDesc() {
+                let sortedBooks = [...books].reverse();
+                let listHtml = sortedBooks.map(book => `<li>${book}</li>`).join('');
+                document.getElementById('bookList').innerHTML = listHtml;
+                document.getElementById('bookList').setAttribute('reversed', '');
+                document.getElementById('bookList').setAttribute('start', books.length);
+            }
+
+            document.getElementById('topToBottom').addEventListener('click', displayBooksAsc);
+            document.getElementById('bottomToTop').addEventListener('click', displayBooksDesc);
+
+            displayBooksAsc();
+        });
+    </script>
+</body>
+</html>
